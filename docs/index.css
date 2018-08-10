@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,600');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:200,600');
 
 .titulo {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Encode Sans Condensed', sans-serif;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
 p, ol, ul, a {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 200;
 }
 
 .acc {
@@ -48,8 +48,8 @@ p, ol, ul, a {
 
 .degrade {
     color: #ffffff;
-    background: #1F3A93;
-    background: linear-gradient(to bottom right, #1F3A93,#3A539B);
+    background: #22313F;
+    background: linear-gradient(to bottom right, #22313F,#34495E); 
 }
 
 .aluno a {
@@ -155,7 +155,7 @@ p {
 
     .item a:hover {
         color: #ffffff;
-        background: #1F3A93;
-        background: linear-gradient(to bottom right, #1F3A93,#3A539B);
+        background: #22313F;
+        background: linear-gradient(to bottom right, #22313F,#34495E);
     }
 } 
