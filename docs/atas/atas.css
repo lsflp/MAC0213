@@ -23,7 +23,6 @@ p, ol, ul, a {
 .item a {
     color: #000000;
     background: #ffffff;
-    border-radius: 2px;
     transition: 0.5s;
     padding: 10px;
     height: 2.25em;
@@ -38,6 +37,7 @@ p, ol, ul, a {
 .fundo {
     color: #ffffff;
     background: #22313F;
+    border-radius: 2px;
 }
 
 .aluno a {
@@ -60,8 +60,8 @@ a {
     text-decoration: none;
 }
 
-p {
-    margin-bottom: 10px;
+p, ul {
+    margin-bottom: 15px;
 }
 
 h1 a {
