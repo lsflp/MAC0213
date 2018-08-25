@@ -30,20 +30,9 @@ p, ol, ul, a {
     line-height: 2.25em;
 }
 
-.resumo {
-    text-align: justify;
-    text-justify: inter-word;
-    display: block;
-    border-radius: 2px;
-}
-
-.aluno, .supervisora, .progresso, .etapas {
-    display: block;
-    border-radius: 2px;
-}
-
-.aluno, .supervisora, .progresso, .etapas {
-    margin-bottom: 20px;
+.lista .item a {
+    color: #ffffff;
+    background: #22313F;
 }
 
 .fundo {
@@ -92,11 +81,6 @@ h1 a {
         font-size: 2rem;
     }
 
-    .resumo {
-        text-align: left;
-        margin-bottom: 20px;
-    }
-
     .acc, h2 {
         text-align: center;
     }
@@ -107,11 +91,7 @@ h1 a {
 }
 
 @media only screen and (min-width:960px) {
-    .resumo {
-        margin-right: 20px;        
-    }
-
-    .resumo, .acc, .menu {
+    .acc, .menu {
         float: left;
     }
 
@@ -121,15 +101,6 @@ h1 a {
 
     .menu {
         width: 45%;
-    }
-    
-    .resumo, .aluno, .supervisora, .progresso, .etapas {
-        width: 45%;        
-    }
-
-    .aluno, .supervisora, .progresso, .etapas {
-        float: left;
-        clear: right;
     }
 
     .content {
@@ -146,7 +117,7 @@ h1 a {
         margin-left: 10px;
     }
     
-    h1, h1 a{
+    h1, h1 a {
         font-size: 3rem;
     }
 
@@ -161,5 +132,10 @@ h1 a {
     .item a:hover {
         color: #ffffff;
         background: #22313F;
+    }
+
+    .lista .item a:hover {
+        color: #000000;
+        background: #ffffff;
     }
 } 
