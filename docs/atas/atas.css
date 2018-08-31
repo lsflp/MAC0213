@@ -58,6 +58,7 @@ p, a, li {
 
 a {
     text-decoration: none;
+    color: #ffffff;
 }
 
 p, ul {
@@ -69,6 +70,11 @@ h1 a {
     color: #000000;
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+li {
+    list-style-type: circle;
+    padding-bottom: 10px;
 }
 
 @media screen and (max-width: 960px) {
