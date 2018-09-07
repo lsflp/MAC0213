@@ -80,14 +80,26 @@ h1 a {
     margin-bottom: 15px;
 }
 
+.dia {
+    text-align: left;
+}
+
+.topico {
+    margin-bottom: 500px;
+}
+
 @media screen and (max-width: 960px) {
     .header, .content {
         width: 90%;
         margin: auto;
     }
 
-    h1, h1 a, h2, h3 {
+    h1, h1 a {
         font-size: 2rem;
+    }
+
+    h2, h3 {
+        font-size: 1.75rem;
     }
 
     .resumo {
@@ -149,11 +161,11 @@ h1 a {
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .item a:hover {
