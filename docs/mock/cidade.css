@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+.municipio, .mapa-titulo {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.municipio {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.fatos {
+    margin: 15px 0;
+}
+
+.fato, .numero {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.fato {
+    font-weight: 700;
+}
+
+.grafico, .evolucao {
+    width: 100%;
+    margin: auto;
+}
+
+.mapa-titulo {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.mapa-animado, .mapa-estatico {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .header, .content {
+        width: 90%;
+        margin: auto;
+    }
+
+    .fato, .numero {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .header, .content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .municipio {
+        font-size: 30px;
+    }
+
+    .grafico {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+
+    .grafico, .mapa-titulo {
+        clear: both;
+    }
+
+    .fatos, .evolucao {
+        width: 50%;
+        float: left;
+    }
+
+    .grafico
+
+    .evolucao {
+        clear: right;
+    }
+
+    .mapa {
+        width: 48%;
+        float: left;
+    }
+
+}
