@@ -12,7 +12,7 @@
 }
 
 .fatos {
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .fato, .numero {
@@ -32,7 +32,6 @@
 
 .mapa-titulo {
     font-size: 20px;
-    margin: 10px 0;
 }
 
 .mapa-animado, .mapa-estatico {
@@ -84,6 +83,7 @@
     .mapa {
         width: 48%;
         float: left;
+        margin: 20px 0;
     }
 
 }
