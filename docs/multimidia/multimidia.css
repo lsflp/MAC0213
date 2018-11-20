@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:200,600');
+
+.titulo {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+p, ol, ul, a {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 200;
+}
+
+.acc {
+    display: block;
+    margin-top: 10px;
+}
+
+.item {
+    text-transform: uppercase;
+}
+
+.item a {
+    color: #000000;
+    background: #ffffff;
+    transition: 0.5s;
+    padding: 10px;
+    height: 2.25em;
+    line-height: 2.25em;
+}
+
+.lista .item a {
+    color: #ffffff;
+    background: #22313F;
+}
+
+.fundo {
+    color: #ffffff;
+    background: #22313F;
+    border-radius: 2px;
+}
+
+.aluno a {
+    color: #ffffff;
+}
+
+.supervisora a {
+    color: #ffffff;
+}
+
+div {
+    padding: 10px 15px;
+}
+
+p, a, li {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+p, ul {
+    margin-bottom: 15px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 960px) {
+    .header, .content {
+        width: 90%;
+        margin: auto;
+    }
+
+    h1, h1 a, h2, h3 {
+        font-size: 2rem;
+    }
+
+    .acc, h2 {
+        text-align: center;
+    }
+    
+    .item {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:960px) {
+    .acc, .menu {
+        float: left;
+    }
+
+    .acc {
+        width: 50%;
+    }
+
+    .menu {
+        width: 45%;
+    }
+
+    .content {
+        clear: both;
+    }
+
+    .header, .content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .item-lista{
+        display: block;
+        margin-left: 10px;
+    }
+
+    .item {
+        display: inline-block;
+        margin-left: 10px;
+    }
+    
+    h1, h1 a {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .item a:hover {
+        color: #ffffff;
+        background: #22313F;
+    }
+
+    .lista .item a:hover {
+        color: #000000;
+        background: #ffffff;
+    }
+} 
