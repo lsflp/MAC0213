@@ -31,10 +31,15 @@
 \usepackage{type1cm}
 \usepackage{listings}
 \usepackage{titletoc}
+\usepackage{pifont}
 \usepackage[fixlanguage]{babelbib}
 \usepackage[font=small,format=plain,labelfont=bf,textfont=it]{caption}
 \usepackage[usenames,svgnames,dvipsnames]{xcolor}
 \usepackage[a4paper,top=2.54cm,bottom=2.0cm,left=2.0cm,right=2.54cm]{geometry}
+
+\newcommand{\aumento}{{\color{green} \ding{115}}}
+\newcommand{\mesmo}{{\color{cyan} \textbf{--}}}
+\newcommand{\queda}{{\color{red} \ding{116}}}
 
 \begin{document}
 	
@@ -114,8 +119,7 @@
 	\include{analiseDistribuicao}
 	
 	% Rankings de 2006 e 2017
-	\chapter{\textit{Rankings}}
-	\label{cap:rankings}
+	\include{analiseRankings}
 	
 	% Análises Preditivas
 	\chapter{Análises Preditivas}
@@ -124,5 +128,8 @@
 	\appendix
 	\include{apendiceDistritos}
 	\include{distritos}
+	
+	\include{apendiceRankings}
+	\include{rankings}
 	
 \end{document}
