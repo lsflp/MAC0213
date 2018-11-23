@@ -1,0 +1,50 @@
+\chapter{Análise de Tendências}
+\label{cap:tendencias}
+
+A demanda e as matrículas têm comportamentos diferentes em cada distrito e nos períodos analisados. Em cada distrito, existe uma tendência sobre como esses parâmetros se comportaram no período dos dados e vão se comportar, no futuro.
+
+Foram feitas três análises de tendência: \textbf{Inversões}, \textbf{Previsão da Demanda} e \textbf{Previsão das Matrículas}. Para cada uma existe uma tabela, que podem ser encontradas no \autoref{apend:tendencias}.
+
+\section{Inversões de tendência}
+
+Uma inversão de tendência é definida aqui como o momento em que um distrito passa a ter mais matrículas do que demanda. Já se sabe, das análises do \autoref{cap:dist}, que não houve nenhum momento em que todos os distritos tiveram mais matrículas do que demandas, mas que em dezembro de 2017, esse número está no seu mínimo, já que só a Sé tem menos matrículas do que demanda.
+
+Essa análise busca encontrar a última vez que uma inversão ocorreu, ou seja, desde quando o distrito está em uma posição mais confortável.
+
+O \textit{ranking} gerado leva em consideração quando essa última inversão ocorreu. Podemos ver que 24 distritos a conseguiram até o final de 2007. Desses 24, 13 são da Zona Leste.
+
+\section{Previsão da Demanda}
+
+Aqui, procura-se saber quando a demanda será zerada em cada distrito. Para saber essa informação, foi usado um modelo preditivo baseado em um modelo auto-regressivo integrado de médias móveis, já implementado no Python.
+
+Com ele, é possível ver como a demanda vai se comportar, num futuro a curto prazo. Temos 12 anos de dados, e a previsão foi feita para os próximos 12 anos. Na figura \autoref{fig:prevdem} é possível observar os dados registrados e a previsão, para o distrito Butantã.
+
+Pode-se ver que ela atinge valores negativos, mas isso acontece porque o modelo não para a previsão quando esses valores são atingidos.
+
+Um total de 73 distritos apresentou demanda zero até o horizonte previsto. Desses, 16 devem ter a demanda bem próxima já em dezembro de 2018. Temos que 9 desses 16 pertencem à zona Leste.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../Analises/graficos/previsao_demanda_BUTANTA}
+	\caption{Dados registrados da demanda e sua previsão para o futuro, no distrito Butantã.}
+	\label{fig:prevdem}
+\end{figure}
+
+\section{Previsão das Matrículas}
+
+Para as matrículas, a meta é atingir uma certa porcentagem da população. Aqui, foi estipulada uma meta de 75\% da população estimada de 0 a 3 anos. 
+
+O modelo utilizado foi o mesmo do que foi usado para as demandas. No entanto, ele não funciona para a previsão da população, pois os dados são anuais, ou seja, apenas 12, o que é muito pouco para esse modelo. Por isso, foi usada, para a previsão, a média populacional no período 2006-2017, já que esse número fica relativamente estável.
+
+Na figura \autoref{fig:prevmat} é possível observar uma previsão de matrículas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../Analises/graficos/previsao_matricula_LAJEADO}
+	\caption{Dados registrados da matrícula e sua previsão para o futuro, no distrito Lajeado.}
+	\label{fig:prevmat}
+\end{figure}
+
+Pode-ser, na lista que está no apêndice, que 17 distritos atingem essa meta até o fim de 2023. Desses, 6 são da zona Leste, 4 são da zona Norte e outros 4 são da zona Sul. Apenas 50 distritos possuem a previsão de atingir a meta antes de 2031.
+
+Um distrito pode não zerar a sua fila e atingir a meta ao mesmo tempo. Considere o distrito do Butantã. Ele zera a demanda em dezembro de 2018, mas só atinge a meta de 75\% da população matriculada depois do horizonte estipulado para as previsões.
