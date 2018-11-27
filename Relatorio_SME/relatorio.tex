@@ -1,0 +1,143 @@
+\documentclass[12pt, a4paper]{book}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{lettrine}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{algpseudocode}
+\usepackage[sfdefault]{FiraSans} 
+\usepackage{FiraMono}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+\usepackage[cm]{sfmath}
+%\usepackage{palatino}
+%\usepackage{mathpazo}
+%\usepackage{inconsolata}
+\usepackage{setspace}
+\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage[round,sort]{natbib}
+\usepackage{emptypage}
+\fontsize{60}{62}\usefont{OT1}{cmr}{m}{n}{\selectfont}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{makeidx}
+\usepackage[nottoc]{tocbibind}
+\usepackage{type1cm}
+\usepackage{listings}
+\usepackage{titletoc}
+\usepackage{pifont}
+\usepackage[fixlanguage]{babelbib}
+\usepackage[font=small,format=plain,labelfont=bf,textfont=it]{caption}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage[a4paper,top=2.54cm,bottom=2.0cm,left=2.0cm,right=2.54cm]{geometry}
+
+\newcommand{\aumento}{{\color{green} \ding{115}}}
+\newcommand{\mesmo}{{\color{cyan} \textbf{--}}}
+\newcommand{\queda}{{\color{red} \ding{116}}}
+
+\urlstyle{same}
+
+\begin{document}
+	
+	% ---------------------------------------------------------------------------- %
+	% Capa
+	\thispagestyle{empty}
+	\begin{center}
+		\vspace*{2.3cm}
+		Universidade de São Paulo\\
+		Instituto de Matemática e Estatística\\
+		Bacharelado em Ciência da Computação
+		
+		
+		\vspace*{3cm}
+		\Large{Luís Felipe de Melo Costa Silva}
+		
+		
+		\vspace{3cm}
+		\textbf{\Large{Análise do Atendimento das Creches
+			    \\ na cidade de São Paulo}}
+		
+		
+		\vskip 5cm
+		\normalsize{São Paulo}
+		
+		\normalsize{Dezembro de 2018}
+	\end{center}
+
+	% ---------------------------------------------------------------------------- %
+	% Página de rosto
+	\newpage
+	\thispagestyle{empty}
+	\begin{center}
+		\vspace*{2.3 cm}
+		\textbf{\Large{Análise do Atendimento das Creches
+				\\ na cidade de São Paulo}}
+		\vspace*{2 cm}
+	\end{center}
+	
+	\vskip 2cm
+	
+	\begin{flushright}
+		Relatório da disciplina \\
+		MAC0213 -- Atividade Curricular em Comunidade.
+	\end{flushright}
+	
+	\vskip 5cm
+	
+	\begin{center}
+		Supervisora: Priscilla Corrêa
+		
+		\vskip 5cm
+		\normalsize{São Paulo}
+		
+		\normalsize{Dezembro de 2018}
+	\end{center}
+	\pagebreak
+	
+	% ---------------------------------------------------------------------------- %
+	% Impressão do sumário
+	\tableofcontents  
+
+	% ---------------------------------------------------------------------------- %
+	% Capítulos
+	\mainmatter
+	
+	% Introdução
+	\include{introducao}
+	
+	% Análise Municipal
+	\include{analiseMunicipal}
+	
+	% Análises Distritais
+	\include{analiseDistrital}
+	
+	% Distribuição do atendimento pela cidade
+	\include{analiseDistribuicao}
+	
+	% Rankings de 2006 e 2017
+	\include{analiseRankings}
+	
+	% Análises Preditivas
+	\include{analiseTendencias}
+	
+	% Conclusão
+	\include{conclusao}
+	
+	% Apêndices	
+	\appendix
+	\include{apendiceDistritos}
+	\include{distritos}
+	
+	\include{apendiceRankings}
+	\include{rankings}
+	
+	\include{apendiceTendencias}
+	\include{tendencias}
+	
+\end{document}
