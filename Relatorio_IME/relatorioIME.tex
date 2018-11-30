@@ -66,13 +66,23 @@ As análises geraram um \href{https://lsflp.github.io/MAC0213/relatorios/relator
 
 \subsection{Análise Municipal}
 
+A Análise Municipal juntou os dados dos distritos para obter os dados da cidade como um todo. Foi gerado um gráfico com a evolução da população total, das matrículas e da demanda, e, a partir disso, se tentou entender como tais variáveis se comportam. Se destaca a sazonalidade que acontece na fila e o crescimento quase que linear das matrículas. Também são vistas tabelas que comparam o primeiro e o último dados da amostra, assim como o primeiro e último mês de dezembro, para a demanda.
+
 \subsection{Análise Distrital}
+
+A Análise Distrital segue o mesmo padrão da Análise Municipal. A diferença é que a unidade de análise são os distritos. A maioria dos distritos segue o mesmo padrão identificado no município. Foi feita aqui uma análise para ver quantos distritos estão numa situação confortável, ou seja, com mais matrículas do que demandas. Essa análise é acompanhada de um apêndice que possui uma página com mais informações para cada distrito.
 
 \subsection{Distribuição do Atendimento}
 
+A terceira análise utiliza de mais recursos visuais para entender como o atendimento ocorre pelo município. São feitos mapas que analisam as matrículas e as demandas absolutas, as taxas de matrículas e demanda proporcionais à população. Também tem mapas que mostram a evolução do atendimento entre junho de 2006 e dezembro de 2017, para as matrículas e entre dezembro de 2006 e dezembro de 2017, para a demanda.
+
 \subsection{\textit{Rankings}}
 
+Os \textit{rankings} apresentam a classificação dos distritos em relação a quatro aspectos: matrículas absolutas, demanda absoluta, matrícula proporcional à população e demanda proporcional à população. Além disso, é feita uma comparação com um \textit{ranking} do primeiro período comparativo da amostra (junho de 2006 para as matrículas e dezembro de 2006 para a demanda, por conta da sazonalidade da fila). Esse segundo \textit{ranking} não está exibido no relatório final. O primeiro está anexo em um apêndice.  
+
 \subsection{Análise de Tendências}
+
+Aqui, tentou-se entender como se comportam três informações: o futuro das matrículas, o futuro das demandas, e quando acontece uma inversão a favor das matrículas, ou seja, um distrito possui mais matrículas do que demanda. Para cada uma dessas informações existe um \textbf{ranking}, presente num apêndice do relatório.
 
 \section{Conclusão da Análise}
 
@@ -102,7 +112,7 @@ Para fazer as 5 análises supracitadas, foram gerados 10 arquivos em Python 3, c
 		\label{fig:temposantana}
 	\end{figure}
 	\item \textbf{Mapas}: Esse \textit{notebook} serve para gerar os mapas de distribuição das matrículas e da demanda pela cidade. Foi o que levou mais tempo para ficar pronto, em torno de 10 dias. Um de seus resultados pode ser visto na \autoref{fig:evabspccreche}. Ele contribuiu com o desenvolvimento da análise de \textbf{Distribuição do Atendimento}.
-	\begin{figure}
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\linewidth]{../Analises/mapas/MAT_CRECHE_jun-06}
 		\caption{Mapa que mostra o número de matrículas pela cidade em junho de 2006, primeiro dado da amostra.}
@@ -155,15 +165,14 @@ Não estão incluídos nesses registros os tempos de elaboração do pôster da 
 
 Mais detalhes podem ser vistos na página de \href{https://lsflp.github.io/MAC0213/estatisticas.html}{estatísticas} do \textit{site} da disciplina.
 
-\section{Conclusão do Projeto e Parte Subjetiva}
+\section{Parte Subjetiva e Projetos Futuros}
 
-Na minha opinião, o projeto foi muito enriquecedor para mim. Foi a primeira vez que fiz um projeto grande de análise de dados. 
+Na minha opinião, o projeto foi muito enriquecedor para mim. Foi a primeira vez que fiz um projeto grande de análise de dados. Não tive muita facilidade no começo, mas depois tudo começou a fazer mais sentido.
 
+Foi a primeira vez que tive algum contato com um órgão governamental. A concepção muda bastante ao conhecer o trabalho que é feito ao invés de só ouvir as notícias e prestar atenção apenas nas ruins.
 
-% FALAR Q DADOS NE
+Para essa disciplina precisei de muita organização. O primeiro motivo para isso é que os resultados seriam entregues apenas no fim do semestre. Quando vi que a média de horas que eu dedicava à disciplina estava aquém do necessário para cumprir as 100 horas mínimas, tive que estabelecer uma rotina de trabalhar para as análises pelo em torno de 90 minutos por dia. É possível observar que tal rotina funcionou. 
 
-% FALAR DO ENVOLVIMENTO COM O GOVERNO
-
-% FALAR DA MINHA ORGANIZACAO
+As análises feitas aqui foram bem simples, e, no final, não precisaram de tanto conhecimento técnico. Para as próximas análises nesse tema, pode ser estudado quem são as crianças que frequentam as creches municipais, traçando um perfil sócioeconômico dos estudantes. Também é possível analisar quais são os critérios que mais influenciam na escolha das creches municipais. Algumas variáveis podem ser estudadas, tais como oferta de vagas no distrito e renda das famílias. É possível também pesquisar agrupamentos entre os distritos, para caracterizá-los e traçar ações em comuns para os grupos eventualmente identificados. 
 
 \end{document}
