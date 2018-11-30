@@ -33,6 +33,7 @@
 \usepackage[font=small,format=plain,labelfont=bf,textfont=it]{caption}
 \usepackage[usenames,svgnames,dvipsnames]{xcolor}
 \usepackage[a4paper,top=2.54cm,bottom=2.0cm,left=2.0cm,right=2.54cm]{geometry}
+\usepackage{pdfpages}
 
 \urlstyle{same}
 
@@ -48,7 +49,7 @@
 
 \section*{Introdução}
 
-Este projeto foi fruto de uma parceria entre o Tecs - Grupo de computação social da USP e a Secretaria Municipal de Educação (SME) de São Paulo. Ele consiste em uma Análise Histórica dos Dados sobre o Atendimento das Creches de São Paulo, de junho de 2006 a dezembro de 2017. Este relatório segue o que está escrito em no \href{https://lsflp.github.io/MAC0213/}{\textit{site}} oficial da disciplina, que complementa esse texto com mais detalhes.
+Este projeto foi fruto de uma parceria entre o Tecs - Grupo de computação social da USP e a Secretaria Municipal de Educação (SME) de São Paulo. Ele consiste em uma Análise Histórica dos Dados sobre o Atendimento das Creches de São Paulo, de junho de 2006 a dezembro de 2017. Este relatório segue o que está escrito no \href{https://lsflp.github.io/MAC0213/}{\textit{site}} oficial da disciplina, que complementa esse texto com mais detalhes.
 
 \section{Tecnologias e Dados}
 
@@ -82,7 +83,7 @@ Os \textit{rankings} apresentam a classificação dos distritos em relação a q
 
 \subsection{Análise de Tendências}
 
-Aqui, tentou-se entender como se comportam três informações: o futuro das matrículas, o futuro das demandas, e quando acontece uma inversão a favor das matrículas, ou seja, um distrito possui mais matrículas do que demanda. Para cada uma dessas informações existe um \textbf{ranking}, presente num apêndice do relatório.
+Aqui, tentou-se entender como se comportam três informações: o futuro das matrículas, o futuro das demandas e quando acontece uma inversão a favor das matrículas, ou seja, um distrito possui mais matrículas do que demanda. Para cada uma dessas informações existe um \textbf{ranking}, presente num apêndice do relatório.
 
 \section{Conclusão da Análise}
 
@@ -92,15 +93,15 @@ A evolução do atendimento foi diferente pelos distritos. Quase todos apresenta
 
 Pensando nas filas, é possível confirmar que elas caíram na maioria dos distritos. No entanto, alguns distritos apresentaram aumento, como a Vila Andrade, Pedreira e Marsilac.
 
-O distrito do Marsilac, o mais meridional da cidade, é o único que atende mais de 100\% de sua população estimada. Tal informação leva a uma reflexão quanto a acurácia das estimativas populacionais e também em relação a distritos que atendem crianças de outro distrito, este último um fato que não pode ser ignorado ao longo do consumo desta análise.
+O distrito do Marsilac, o mais meridional da cidade, é o único que atende mais de 100\% de sua população estimada. Tal informação leva a uma reflexão quanto a acurácia das estimativas populacionais e também em relação a distritos que atendem crianças de outro distrito, este último um fato que não pode ser ignorado ao longo da leitura dessa análise.
 
-De acordo com os dados mais recentes, os distritos que apresentam o maior número de vagas se localizam na periferia das zonas Sul, Leste e Norte. São as mesmas regiões que concentram boa parte da demanda. No entanto, foram justamente essas regiões que tiveram os maiores aumentos no número de matrículas e maiores reduções na fila.
+De acordo com os dados mais recentes, os distritos que apresentam o maior número de vagas se localizam na periferia das zonas Sul, Leste e Norte. São as mesmas regiões que concentram boa parte da demanda. Contudo, foram justamente essas regiões que tiveram os maiores aumentos no número de matrículas e maiores reduções na fila.
 
-Portanto, conclui-se que embora o município de São Paulo esteja melhorando no atendimento de creches, essa melhora não é refletida de maneira igual pela cidade. Isso não deve ser considerado um fato ruim, e se deve a diversas razões. Uma delas é que a população se distribui de maneira diferente pela cidade. Uma outra é que nem todas as crianças se matriculam em creches municipais, e sim, na rede privada. Acontece também de crianças com idades entre 0 e 3 anos não estarem matriculadas em nenhum lugar, ficando em casa, com parentes, por exemplo.
+Portanto, conclui-se que, embora o município de São Paulo esteja melhorando no atendimento de creches, essa melhora não é refletida de maneira igual pela cidade. Isso não deve ser considerado um fato ruim, e se deve a diversas razões. Uma delas é que a população se distribui de maneira diferente pela cidade e outra é que nem todas as crianças se matriculam em creches municipais, frequentando a rede privada. Acontece também de crianças com idades entre 0 e 3 anos não estarem matriculadas em nenhum lugar, ficando em casa, com parentes, por exemplo.
 
 \section{Arquivos construídos}
 
-Para fazer as 5 análises supracitadas, foram gerados 10 arquivos em Python 3, cada uma com uma parte da análise.
+Para fazer as 5 análises supracitadas, foram gerados 10 arquivos em Python 3, cada um com uma parte da análise.
 
 \begin{enumerate}
 	\item \textbf{Filtro de arquivos}: Sua ideia era de pegar os arquivos de dados obtidos das fontes externas, limpar o que não seria usado durante o semestre, arrumar parte dos dados e então, salvar o produto em um arquivo resultante que seria usado em todos os outros \textit{notebooks}. Contribui com \textbf{todas} as análises.
@@ -123,27 +124,35 @@ Para fazer as 5 análises supracitadas, foram gerados 10 arquivos em Python 3, c
 	\item \textbf{Comparação}: Esse \textit{notebook} serviu para comparar cada distrito com o município. Foram feitos gráficos que mostram a evolução da participação proporcional de cada distrito no município (um deles pode ser visto no \href{https://lsflp.github.io/MAC0213/poster/poster_a1.pdf}{\textit{pôster}} feito para a disciplina) e gráficos que exibem a evolução do distrito no \textit{ranking} municipal (esses últimos nunca usados, porém essenciais para a ideia da análise de \textbf{\textit{Rankings}}).
 	\item \textbf{Listas}: Constrói dois gráficos apenas: um que mostra o número de matrículas em junho de 2006 nos distritos sobreposto às matrículas em dezembro de 2007 e um outro que compara a demanda em dezembro de 2006 com a demanda em dezembro de 2007. O primeiro foi utilizado no \href{https://lsflp.github.io/MAC0213/poster/poster_a1.pdf}{\textit{pôster}} feito para a disciplina e o outro está presente numa versão \href{https://lsflp.github.io/MAC0213/poster/poster_a0.pdf}{\textit{alternativa}} do pôster. O conhecimento obtido aqui foi utilizado para a análise de \textbf{\textit{Rankings}}.
 	\item \textbf{Previsão da demanda}: Usando um modelo conhecido como ARIMA\footnote{\url{https://pt.wikipedia.org/wiki/ARIMA}}, foi construída uma previsão de como a demanda vai se comportar num futuro próximo, a partir dos dados de entrada. Com isso, foi feito uma estimativa que mostra quando a demanda atingirá o valor zero. Usada na \textbf{Análise de Tendências}.
-	\item \textbf{Previsão das matrículas}: Funciona do mesmo modo que o \textit{notebook} anterior. Sua variação se deve pelo fato de ele ser feito para a previsão das matrículas. A meta aqui não é atingir um valor absoluto, porque os distritos não têm as mesmas populações. Por isso, foi usado um valor proporcional de 75\%. Como não existem dados de estimativas populacionais para anos depois de 2018, foi usada a média populacional entre 1995 e 2017 como parâmetro de comparação. Mais detalhes ficam na \textbf{Análise de Tendências}.
-	\item \textbf{Inversões}: Procura quando ocorreu a última inversão entre demandas e matrículas, que é quando o número de matrículas fica maior que a demanda. Assume-se que uma posição confortável para um distrito seja quando ele possui mais matrículas do que demandas. Um total de 63 distritos possuíam mais fila do que matrículas em junho de 2006. Já em dezembro de 2017, apenas a Sé se encontra nessa condição. Para a \textbf{Análise de Tendências}, foi gerada uma tabela que mostra quando as inversões aconteceram pelos distritos.
+	\item \textbf{Previsão das matrículas}: Funciona do mesmo modo que o \textit{notebook} anterior. Sua variação se deve pelo fato de ele ser feito para a previsão das matrículas. A meta aqui não é atingir um valor absoluto, porque os distritos não têm as mesmas populações. Por isso, foi usado um valor proporcional de 75\%. Como não existem dados de estimativas populacionais para anos depois de 2018, foi usada a média populacional entre 1995 e 2017 como parâmetro de comparação. Mais detalhes estão na \textbf{Análise de Tendências}.
+	\item \textbf{Inversões}: Procura quando ocorreu a última inversão entre demandas e matrículas, que é quando o número de matrículas fica maior que a demanda. Assume-se que uma posição confortável para um distrito seja quando ele possui mais matrículas do que demandas. Um total de 63 distritos possuíam mais fila do que matrículas em junho de 2006. Já em dezembro de 2017, apenas a Sé encontrava-se nessa condição. Para a \textbf{Análise de Tendências}, foi gerada uma tabela que mostra quando as inversões aconteceram pelos distritos.
 \end{enumerate}
 
 Também foram feitos alguns \textit{notebooks} auxiliares para a produção de texto automatizado para o Relatório Final entregue à SME.
 
 \section{Relação com a SME}
 
-A equipe da SME com quem tive contato era formada pela minha supervisora, Priscilla Corrêa,  Priscilla Corrêa, Assessora Técnica na Secretaria Municipal de Educação de São Paulo. Também tive contato com a Ananda Grinkraut {\color{red} PERGUNTAR O Q A ANANDA FAZ}. Nossa relação era pautada por conversas por e-mail e por mensagens.
+A pessoa da SME com quem mais tive contato era a minha supervisora, Priscilla Corrêa, Assessora Técnica na Secretaria Municipal de Educação de São Paulo. Também tive contato com a Ananda Grinkraut, Analista de Políticas Públicas e Gestão Governamental. Nossa relação era pautada por conversas por e-mail e por mensagens. Uma foto nossa pode ser vista na \autoref{fig:img6634}
 
-Fizemos algumas reuniões presenciais, a maioria delas na Casa do Pátio Digital, na casa Sérgio Buarque de Holanda, recentemente reformada, localizada no Pacaembu, na zona Oeste da cidade. Uma outra reunião foi feita na sede da SME, na Vila Clementino, zona Sul da cidade.
+Fizemos algumas reuniões presenciais, a maioria delas na sede do Pátio Digital, na casa Sérgio Buarque de Holanda, recentemente reformada, localizada no Pacaembu, na zona Oeste da cidade. Uma outra reunião foi feita na sede da SME, na Vila Clementino, zona Sul da cidade.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{IMG_6634}
+	\caption{Da esquerda para a direita, Priscilla, eu e Ananda.}
+	\label{fig:img6634}
+\end{figure}
+
 
 \section{Horas trabalhadas}
 
-Para esta disciplina, foi usado um total de \textbf{108 horas}, divididas como na tabela abaixo:
+Para esta disciplina foi usado um total de \textbf{109 horas}, divididas como na tabela abaixo:
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l}
 		\textbf{Atividade}                                   & \textbf{Horas Registradas} \\ \hline
-		\textit{Reuniões e Apresentações com a SME} & 8                          \\ \hline
+		\textit{Reuniões e Apresentações com a SME} & 9                          \\ \hline
 		\textit{Análises}                           & 77                         \\ \hline
 		\textit{Elaboração do Relatório Final}    & 23                         \\ 
 	\end{tabular}
@@ -157,7 +166,7 @@ A relação hora-mês pode ser vista na tabela a seguir:
 		\textbf{Atividade}                                   & \textbf{Horas Registradas} \\ \hline
 		\textit{Agosto e Setembro} & 25                          \\ \hline
 		\textit{Outubro}                           & 40                         \\ \hline
-		\textit{Novembro}    & 43                         \\ 
+		\textit{Novembro}    & 44                         \\ 
 	\end{tabular}
 \end{table}
 
@@ -165,14 +174,18 @@ Não estão incluídos nesses registros os tempos de elaboração do pôster da 
 
 Mais detalhes podem ser vistos na página de \href{https://lsflp.github.io/MAC0213/estatisticas.html}{estatísticas} do \textit{site} da disciplina.
 
+Na página a seguir, está a confirmação das 100 horas trabalhadas.
+
+\includepdf{declaracao.pdf}
+
 \section{Parte Subjetiva e Projetos Futuros}
 
-Na minha opinião, o projeto foi muito enriquecedor para mim. Foi a primeira vez que fiz um projeto grande de análise de dados. Não tive muita facilidade no começo, mas depois tudo começou a fazer mais sentido.
+Na minha opinião, o projeto foi muito enriquecedor. Foi a primeira vez que fiz um projeto grande de análise de dados. Não tive muita facilidade no começo, mas depois tudo começou a fazer mais sentido.
 
-Foi a primeira vez que tive algum contato com um órgão governamental. A concepção muda bastante ao conhecer o trabalho que é feito ao invés de só ouvir as notícias e prestar atenção apenas nas ruins.
+Foi a primeira vez que tive algum contato com um órgão governamental. A concepção muda bastante ao conhecer o trabalho que é feito por eles ao invés de só ouvir as notícias, que costumam destacar fatos negativos.
 
-Para essa disciplina precisei de muita organização. O primeiro motivo para isso é que os resultados seriam entregues apenas no fim do semestre. Quando vi que a média de horas que eu dedicava à disciplina estava aquém do necessário para cumprir as 100 horas mínimas, tive que estabelecer uma rotina de trabalhar para as análises pelo em torno de 90 minutos por dia. É possível observar que tal rotina funcionou. 
+Para essa matéria precisei de muita organização. O primeiro motivo para isso é que os resultados seriam entregues apenas no fim do semestre. Quando vi que a média de horas que eu dedicava à disciplina estava aquém do necessário para cumprir as 100 horas mínimas, tive que estabelecer uma rotina de trabalhar para as análises pelo em torno de 90 minutos por dia. É possível observar que isso funcionou. 
 
-As análises feitas aqui foram bem simples, e, no final, não precisaram de tanto conhecimento técnico. Para as próximas análises nesse tema, pode ser estudado quem são as crianças que frequentam as creches municipais, traçando um perfil sócioeconômico dos estudantes. Também é possível analisar quais são os critérios que mais influenciam na escolha das creches municipais. Algumas variáveis podem ser estudadas, tais como oferta de vagas no distrito e renda das famílias. É possível também pesquisar agrupamentos entre os distritos, para caracterizá-los e traçar ações em comuns para os grupos eventualmente identificados. 
+As análises feitas aqui foram bem simples, e, no final, não precisaram de tanto conhecimento técnico. Para as próximas análises nesse tema, pode ser estudado quem são as crianças que frequentam as creches municipais, traçando um perfil sócioeconômico dos estudantes. Também é possível analisar quais são os critérios que mais influenciam na escolha das creches municipais. Algumas variáveis podem ser pequisadas, tais como oferta de vagas no distrito e renda das famílias. É possível também procurar agrupamentos entre os distritos, para caracterizá-los e traçar ações em comum para os grupos eventualmente identificados. 
 
 \end{document}
