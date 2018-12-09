@@ -59,7 +59,15 @@ Outra fonte foi a de dados populacionais, vindos do \textit{site}\footnote{\url{
 
 Além desses dados, foram usados os dados das subdivisões de São Paulo em cinco zonas, de acordo com o Plano Diretor Estratégico de 2002 (PDE), também proveniente do \textit{site} da Prefeitura.
 
-O desenvolvimento da análise foi inteiramente feito em Python 3\footnote{\url{https://www.python.org/}}. A ferramenta utilizada para os códigos foi a Jupyter\footnote{\url{http://jupyter.org/}}, que coloca o desenvolvimento numa janela de navegador Web. A principal biblioteca de análise utilizada foi a Pandas\footnote{\url{https://pandas.pydata.org/}}, que permite a conversão de dados .csv para estruturas de dados com usabilidade simples. Para os gráficos, foi usada a Matplotlib\footnote{\url{https://matplotlib.org/}}.
+O desenvolvimento da análise foi inteiramente feito em Python 3\footnote{\url{https://www.python.org/}}. A ferramenta utilizada para os códigos foi a Jupyter\footnote{\url{http://jupyter.org/}}, que coloca o desenvolvimento numa janela de navegador Web, como se vê na \autoref{fig:jupyter}. A principal biblioteca de análise utilizada foi a Pandas\footnote{\url{https://pandas.pydata.org/}}, que permite a conversão de dados .csv para estruturas de dados com usabilidade simples. Para os gráficos, foi usada a Matplotlib\footnote{\url{https://matplotlib.org/}}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{jupyter}
+	\caption{Exemplo de arquivo no Jupyter.}
+	\label{fig:jupyter}
+\end{figure}
+
 
 \section{Análises feitas}
 
@@ -67,23 +75,27 @@ As análises geraram um \href{https://lsflp.github.io/MAC0213/relatorios/relator
 
 \subsection{Análise Municipal}
 
-A Análise Municipal juntou os dados dos distritos para obter os dados da cidade como um todo. Foi gerado um gráfico com a evolução da população total, das matrículas e da demanda, e, a partir disso, se tentou entender como tais variáveis se comportam. Se destaca a sazonalidade que acontece na fila e o crescimento quase que linear das matrículas. Também são vistas tabelas que comparam o primeiro e o último dados da amostra, assim como o primeiro e último mês de dezembro, para a demanda.
+A Análise Municipal juntou os dados dos distritos para obter os dados da cidade como um todo. Foi gerado um gráfico com a evolução da população total, das matrículas e da demanda, e, a partir disso, se tentou entender como tais variáveis se comportam. Se destaca a sazonalidade que acontece na fila e o crescimento quase que linear das matrículas. Também são vistas tabelas que comparam o primeiro e o último dados da amostra, assim como o primeiro e último mês de dezembro, para a demanda. Sua escrita levou \textbf{1 hora}.
 
 \subsection{Análise Distrital}
 
-A Análise Distrital segue o mesmo padrão da Análise Municipal. A diferença é que a unidade de análise são os distritos. A maioria dos distritos segue o mesmo padrão identificado no município. Foi feita aqui uma análise para ver quantos distritos estão numa situação confortável, ou seja, com mais matrículas do que demandas. Essa análise é acompanhada de um apêndice que possui uma página com mais informações para cada distrito.
+A Análise Distrital segue o mesmo padrão da Análise Municipal. A diferença é que a unidade de análise são os distritos. A maioria dos distritos segue o mesmo padrão identificado no município. Foi feita aqui uma análise para ver quantos distritos estão numa situação confortável, ou seja, com mais matrículas do que demandas. Essa análise é acompanhada de um apêndice que possui uma página com mais informações para cada distrito. Sua escrita levou \textbf{8 horas}, pois, além de fazer a análise, foi necessário construir arquivos para gerar a página de cada distrito individualmente. Um exemplo de página gerada automaticamente está no \autoref{apend:page}.
 
 \subsection{Distribuição do Atendimento}
 
-A terceira análise utiliza de mais recursos visuais para entender como o atendimento ocorre pelo município. São feitos mapas que analisam as matrículas e as demandas absolutas, as taxas de matrículas e demanda proporcionais à população. Também tem mapas que mostram a evolução do atendimento entre junho de 2006 e dezembro de 2017, para as matrículas e entre dezembro de 2006 e dezembro de 2017, para a demanda.
+A terceira análise utiliza de mais recursos visuais para entender como o atendimento ocorre pelo município. São feitos mapas que analisam as matrículas e as demandas absolutas, as taxas de matrículas e demanda proporcionais à população. Também tem mapas que mostram a evolução do atendimento entre junho de 2006 e dezembro de 2017, para as matrículas e entre dezembro de 2006 e dezembro de 2017, para a demanda. Sua escrita levou \textbf{2h30}.
 
 \subsection{\textit{Rankings}}
 
-Os \textit{rankings} apresentam a classificação dos distritos em relação a quatro aspectos: matrículas absolutas, demanda absoluta, matrícula proporcional à população e demanda proporcional à população. Além disso, é feita uma comparação com um \textit{ranking} do primeiro período comparativo da amostra (junho de 2006 para as matrículas e dezembro de 2006 para a demanda, por conta da sazonalidade da fila). Esse segundo \textit{ranking} não está exibido no relatório final. O primeiro está anexo em um apêndice.  
+Os \textit{rankings} apresentam a classificação dos distritos em relação a quatro aspectos: matrículas absolutas, demanda absoluta, matrícula proporcional à população e demanda proporcional à população. Além disso, é feita uma comparação com um \textit{ranking} do primeiro período comparativo da amostra (junho de 2006 para as matrículas e dezembro de 2006 para a demanda, por conta da sazonalidade da fila). Esse segundo \textit{ranking} não está exibido no relatório final. O primeiro está anexo em um apêndice. Sua escrita levou \textbf{3h30}, já que, aĺém de escrever sobre o que foi observado, foram gerados arquivos para elaborar as tabelas de \textit{ranking}, que possuem 96 linhas cada, inviabilizando a escrita manual em tempo hábil.
 
 \subsection{Análise de Tendências}
 
-Aqui, tentou-se entender como se comportam três informações: o futuro das matrículas, o futuro das demandas e quando acontece uma inversão a favor das matrículas, ou seja, um distrito possui mais matrículas do que demanda. Para cada uma dessas informações existe um \textbf{ranking}, presente num apêndice do relatório.
+Aqui, tentou-se entender como se comportam três informações: o futuro das matrículas, o futuro das demandas e quando acontece uma inversão a favor das matrículas, ou seja, um distrito possui mais matrículas do que demanda. Para cada uma dessas informações existe um \textbf{ranking}, presente num apêndice do relatório. Sua escrita levou \textbf{3 horas}.
+
+\subsection{Relatório final}
+
+Além do tempo utilizado escrevendo sobre as análises, foi gasto certo tempo revisando o relatório e escolhendo o melhor estilo para ele, além de separar cada capítulo em um arquivo \LaTeX. Com isso, foram usadas \textbf{5 horas}. Portanto, as atividades relacionadas ao relatório tomaram \textbf{23 horas}.
 
 \section{Conclusão da Análise}
 
@@ -104,37 +116,45 @@ Portanto, conclui-se que, embora o município de São Paulo esteja melhorando no
 Para fazer as 5 análises supracitadas, foram gerados 10 arquivos em Python 3, cada um com uma parte da análise.
 
 \begin{enumerate}
-	\item \textbf{Filtro de arquivos}: Sua ideia era de pegar os arquivos de dados obtidos das fontes externas, limpar o que não seria usado durante o semestre, arrumar parte dos dados e então, salvar o produto em um arquivo resultante que seria usado em todos os outros \textit{notebooks}. Contribui com \textbf{todas} as análises.
-	\item \textbf{Gráficos de tempo}: Gera um gráfico de evolução da população, das matrículas e da demanda para cada um dos 96 distritos da cidade de São Paulo, a partir dos dados filtrados. Um exemplo de seu produto pode ser visto na \autoref{fig:temposantana}. Esse arquivo ajudou na elaboração da \textbf{Análise Distrital} e da \textbf{Análise Municipal}, pelo conhecimento obtido.
+	\item \textbf{Filtro de arquivos}: Sua ideia era de pegar os arquivos de dados obtidos das fontes externas, limpar o que não seria usado durante o semestre, arrumar parte dos dados e então, salvar o produto em um arquivo resultante que seria usado em todos os outros \textit{notebooks}. Contribui com \textbf{todas} as análises. Seu desenvolvimento levou \textbf{7 horas}.
+	\item \textbf{Gráficos de tempo}: Gera um gráfico de evolução da população, das matrículas e da demanda para cada um dos 96 distritos da cidade de São Paulo, a partir dos dados filtrados. Um exemplo de seu produto pode ser visto na \autoref{fig:temposantana}. Esse arquivo ajudou na elaboração da \textbf{Análise Distrital} e da \textbf{Análise Municipal}, pelo conhecimento obtido. Seu desenvolvimento levou \textbf{5 horas}.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7\linewidth]{../Analises/graficos/tempo/tempo_SANTANA}
+		\includegraphics[width=0.6\linewidth]{../Analises/graficos/tempo/tempo_SANTANA}
 		\caption{Evolução das matrículas, da demanda, e da população de 0 a 3 anos no distrito Santana.}
 		\label{fig:temposantana}
 	\end{figure}
-	\item \textbf{Mapas}: Esse \textit{notebook} serve para gerar os mapas de distribuição das matrículas e da demanda pela cidade. Foi o que levou mais tempo para ficar pronto, em torno de 10 dias. Um de seus resultados pode ser visto na \autoref{fig:evabspccreche}. Ele contribuiu com o desenvolvimento da análise de \textbf{Distribuição do Atendimento}.
+	\item \textbf{Mapas}: Esse \textit{notebook} serve para gerar os mapas de distribuição das matrículas e da demanda pela cidade. Foi o que levou mais tempo para ficar pronto, em torno de 10 dias. Um de seus resultados pode ser visto na \autoref{fig:evabspccreche}. Ele contribuiu com o desenvolvimento da análise de \textbf{Distribuição do Atendimento}. Seu desenvolvimento levou \textbf{17 horas}.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\linewidth]{../Analises/mapas/MAT_CRECHE_jun-06}
+		\includegraphics[width=0.45\linewidth]{../Analises/mapas/MAT_CRECHE_jun-06}
 		\caption{Mapa que mostra o número de matrículas pela cidade em junho de 2006, primeiro dado da amostra.}
 		\label{fig:evabspccreche}
 	\end{figure}
-	\item \textbf{Análise Municipal}: Cuida de transformar (no caso, somar) todos os dados referentes ao município (total populacional estimado de 0 a 3 anos, número de matrículas e demanda) para posterior análise. Ajuda na \textbf{Análise Municipal}, como pode-se pensar. Também gera um gráfico como o da \autoref{fig:evabspccreche}.
-	\item \textbf{Agrupamentos}: A ideia de criar esse arquivo era para gerar gráficos de dispersão que mostrariam como os distritos podem ser agrupados, no entanto, após algumas experiências, foi observado que os distritos sempre estão relativamente próximos, em taxas de atendimento relativas. Gráficos feitos aqui podem ser visto na análise de \textbf{Distribuição do Atendimento}.
-	\item \textbf{Comparação}: Esse \textit{notebook} serviu para comparar cada distrito com o município. Foram feitos gráficos que mostram a evolução da participação proporcional de cada distrito no município (um deles pode ser visto no \href{https://lsflp.github.io/MAC0213/poster/poster_a1.pdf}{\textit{pôster}} feito para a disciplina) e gráficos que exibem a evolução do distrito no \textit{ranking} municipal (esses últimos nunca usados, porém essenciais para a ideia da análise de \textbf{\textit{Rankings}}).
-	\item \textbf{Listas}: Constrói dois gráficos apenas: um que mostra o número de matrículas em junho de 2006 nos distritos sobreposto às matrículas em dezembro de 2007 e um outro que compara a demanda em dezembro de 2006 com a demanda em dezembro de 2007. O primeiro foi utilizado no \href{https://lsflp.github.io/MAC0213/poster/poster_a1.pdf}{\textit{pôster}} feito para a disciplina e o outro está presente numa versão \href{https://lsflp.github.io/MAC0213/poster/poster_a0.pdf}{\textit{alternativa}} do pôster. O conhecimento obtido aqui foi utilizado para a análise de \textbf{\textit{Rankings}}.
-	\item \textbf{Previsão da demanda}: Usando um modelo conhecido como ARIMA\footnote{\url{https://pt.wikipedia.org/wiki/ARIMA}}, foi construída uma previsão de como a demanda vai se comportar num futuro próximo, a partir dos dados de entrada. Com isso, foi feito uma estimativa que mostra quando a demanda atingirá o valor zero. Usada na \textbf{Análise de Tendências}.
-	\item \textbf{Previsão das matrículas}: Funciona do mesmo modo que o \textit{notebook} anterior. Sua variação se deve pelo fato de ele ser feito para a previsão das matrículas. A meta aqui não é atingir um valor absoluto, porque os distritos não têm as mesmas populações. Por isso, foi usado um valor proporcional de 75\%. Como não existem dados de estimativas populacionais para anos depois de 2018, foi usada a média populacional entre 1995 e 2017 como parâmetro de comparação. Mais detalhes estão na \textbf{Análise de Tendências}.
-	\item \textbf{Inversões}: Procura quando ocorreu a última inversão entre demandas e matrículas, que é quando o número de matrículas fica maior que a demanda. Assume-se que uma posição confortável para um distrito seja quando ele possui mais matrículas do que demandas. Um total de 63 distritos possuíam mais fila do que matrículas em junho de 2006. Já em dezembro de 2017, apenas a Sé encontrava-se nessa condição. Para a \textbf{Análise de Tendências}, foi gerada uma tabela que mostra quando as inversões aconteceram pelos distritos.
+	\item \textbf{Análise Municipal}: Cuida de transformar (no caso, somar) todos os dados referentes ao município (total populacional estimado de 0 a 3 anos, número de matrículas e demanda) para posterior análise. Ajuda na \textbf{Análise Municipal}, como pode-se pensar. Também gera um gráfico como o da \autoref{fig:evabspccreche}. Seu desenvolvimento levou \textbf{2 horas}.
+	\item \textbf{Agrupamentos}: A ideia de criar esse arquivo era para gerar gráficos de dispersão que mostrariam como os distritos podem ser agrupados, no entanto, após algumas experiências, foi observado que os distritos sempre estão relativamente próximos, em taxas de atendimento relativas. Gráficos feitos aqui podem ser visto na análise de \textbf{Distribuição do Atendimento}. Seu desenvolvimento levou \textbf{3h30}.
+	\item \textbf{Comparação}: Esse \textit{notebook} serviu para comparar cada distrito com o município. Foram feitos gráficos que mostram a evolução da participação proporcional de cada distrito no município (um deles pode ser visto no \href{https://lsflp.github.io/MAC0213/poster/poster_a1.pdf}{\textit{pôster}} feito para a disciplina) e gráficos que exibem a evolução do distrito no \textit{ranking} municipal (esses últimos nunca usados, porém essenciais para a ideia da análise de \textbf{\textit{Rankings}}). Seu desenvolvimento levou \textbf{3h30}.
+	\item \textbf{Listas}: Constrói dois gráficos apenas: um que mostra o número de matrículas em junho de 2006 nos distritos sobreposto às matrículas em dezembro de 2007 e um outro que compara a demanda em dezembro de 2006 com a demanda em dezembro de 2007. O primeiro foi utilizado no \href{https://lsflp.github.io/MAC0213/poster/poster_a1.pdf}{\textit{pôster}} feito para a disciplina e o outro está presente numa versão \href{https://lsflp.github.io/MAC0213/poster/poster_a0.pdf}{\textit{alternativa}} do pôster. O conhecimento obtido aqui foi utilizado para a análise de \textbf{\textit{Rankings}}. Seu desenvolvimento levou \textbf{8h30}.
+	\item \textbf{Previsão da demanda}: Usando um modelo conhecido como ARIMA\footnote{\url{https://pt.wikipedia.org/wiki/ARIMA}}, foi construída uma previsão de como a demanda vai se comportar num futuro próximo, a partir dos dados de entrada. Com isso, foi feito uma estimativa que mostra quando a demanda atingirá o valor zero. Usada na \textbf{Análise de Tendências}. Seu desenvolvimento levou \textbf{10 horas}.
+	\item \textbf{Previsão das matrículas}: Funciona do mesmo modo que o \textit{notebook} anterior. Sua variação se deve pelo fato de ele ser feito para a previsão das matrículas. A meta aqui não é atingir um valor absoluto, porque os distritos não têm as mesmas populações. Por isso, foi usado um valor proporcional de 75\%. Como não existem dados de estimativas populacionais para anos depois de 2018, foi usada a média populacional entre 1995 e 2017 como parâmetro de comparação. Mais detalhes estão na \textbf{Análise de Tendências}. Seu desenvolvimento levou \textbf{5 horas}.
+	\item \textbf{Inversões}: Procura quando ocorreu a última inversão entre demandas e matrículas, que é quando o número de matrículas fica maior que a demanda. Assume-se que uma posição confortável para um distrito seja quando ele possui mais matrículas do que demandas. Um total de 63 distritos possuíam mais fila do que matrículas em junho de 2006. Já em dezembro de 2017, apenas a Sé encontrava-se nessa condição. Para a \textbf{Análise de Tendências}, foi gerada uma tabela que mostra quando as inversões aconteceram pelos distritos. Seu desenvolvimento levou \textbf{2 horas}.
 \end{enumerate}
 
-Também foram feitos alguns \textit{notebooks} auxiliares para a produção de texto automatizado para o Relatório Final entregue à SME.
+Também fiz uso de um tempo para padronizar a geração de gráficos no geral, buscar outros dados, como renda \textit{per capita}, e modularizar e revisar os arquivos. Isso tudo levou \textbf{5 horas}. Portanto, com o desenvolvimento dos arquivos da análise foram usadas \textbf{68h30}.  
 
 \section{Relação com a SME}
 
 A pessoa da SME com quem mais tive contato era a minha supervisora, Priscilla Corrêa, Assessora Técnica na Secretaria Municipal de Educação de São Paulo. Também tive contato com a Ananda Grinkraut, Analista de Políticas Públicas e Gestão Governamental. Nossa relação era pautada por conversas por e-mail e por mensagens. Uma foto nossa pode ser vista na \autoref{fig:img6634}
 
-Fizemos algumas reuniões presenciais, a maioria delas na sede do Pátio Digital, na casa Sérgio Buarque de Holanda, recentemente reformada, localizada no Pacaembu, na zona Oeste da cidade. Uma outra reunião foi feita na sede da SME, na Vila Clementino, zona Sul da cidade.
+Fizemos três reuniões presenciais, duas delas na sede do Pátio Digital, na casa Sérgio Buarque de Holanda, recentemente reformada, localizada no Pacaembu, na zona Oeste da cidade. Uma outra reunião foi feita na sede da SME, na Vila Clementino, zona Sul da cidade.
+
+A primeira reunião, de apresentação da SME e do projeto, foi em 30 de agosto e durou \textbf{1 hora}.
+
+A segunda reunião, de acompanhamento e apresentação aconteceu em 27 de agosto, e também durou \textbf{1 hora}. A preparação para ela levou \textbf{6 horas}.
+
+Haveria uma reunião em outubro. Para ela, eu havia planejado apresentar um \textit{design} de páginas para fazer o relatório \textit{online}. \textit{Sua execução levou \textbf{8h30}, incorretamente contados como tempo gasto com análises, na versão prévia deste documento}. Essa reunião não aconteceu, e as páginas foram substituídas pelo relatório em formato pdf.
+
+A última reunião ocorreu no dia 30 de novembro, e levou \textbf{1 hora}. Nela, foram apresentados os últimos resultados das análises, e foi a única na sede da SME.
 
 \begin{figure}[H]
 	\centering
@@ -143,17 +163,20 @@ Fizemos algumas reuniões presenciais, a maioria delas na sede do Pátio Digital
 	\label{fig:img6634}
 \end{figure}
 
+Portanto, com as reuniões e o preparo para elas foram utilizadas \textbf{17h30}.
 
 \section{Horas trabalhadas}
 
-Para esta disciplina foi usado um total de \textbf{109 horas}, divididas como na tabela abaixo:
+Para esta disciplina foi usado um total de \textbf{109 horas}, passando o total de 100 horas estipulado.
+
+O tempo usado para a matéria foi dividido basicamente em três partes: Reuniões e Apresentações com a SME, Análises de Dados e Elaboração do Relatório Final. Os detalhes sobre as horas gastas estão espalhados por este documento. Em resumo:
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l}
 		\textbf{Atividade}                                   & \textbf{Horas Registradas} \\ \hline
-		\textit{Reuniões e Apresentações com a SME} & 9                          \\ \hline
-		\textit{Análises}                           & 77                         \\ \hline
+		\textit{Reuniões e Apresentações com a SME} & 17,5                          \\ \hline
+		\textit{Análises}                           & 68,5                         \\ \hline
 		\textit{Elaboração do Relatório Final}    & 23                         \\ 
 	\end{tabular}
 \end{table}
@@ -174,9 +197,7 @@ Não estão incluídos nesses registros os tempos de elaboração do pôster da 
 
 Mais detalhes podem ser vistos na página de \href{https://lsflp.github.io/MAC0213/estatisticas.html}{estatísticas} do \textit{site} da disciplina.
 
-Na página a seguir, está a confirmação das 100 horas trabalhadas.
-
-\includepdf{declaracao.pdf}
+No \autoref{apend:dec}, está a confirmação das 100 horas trabalhadas.
 
 \section{Parte Subjetiva e Projetos Futuros}
 
@@ -187,5 +208,23 @@ Foi a primeira vez que tive algum contato com um órgão governamental. A concep
 Para essa matéria precisei de muita organização. O primeiro motivo para isso é que os resultados seriam entregues apenas no fim do semestre. Quando vi que a média de horas que eu dedicava à disciplina estava aquém do necessário para cumprir as 100 horas mínimas, tive que estabelecer uma rotina de trabalhar para as análises pelo em torno de 90 minutos por dia. É possível observar que isso funcionou. 
 
 As análises feitas aqui foram bem simples, e, no final, não precisaram de tanto conhecimento técnico. Para as próximas análises nesse tema, pode ser estudado quem são as crianças que frequentam as creches municipais, traçando um perfil sócioeconômico dos estudantes. Também é possível analisar quais são os critérios que mais influenciam na escolha das creches municipais. Algumas variáveis podem ser pequisadas, tais como oferta de vagas no distrito e renda das famílias. É possível também procurar agrupamentos entre os distritos, para caracterizá-los e traçar ações em comum para os grupos eventualmente identificados. 
+
+\clearpage
+
+\appendix
+
+\section{Análise Distrital}
+\label{apend:page}
+
+Exemplo de página gerada automaticamente sobre a análise de um distrito. Está na página a seguir.
+
+\includepdf{ipiranga.pdf}
+
+\section{Declaração de Horas Trabalhadas}
+\label{apend:dec}
+
+Declaração, feita para a SME, confirmando o total mínimo de horas trabalhadas para a disciplina. Segue na próxima página.
+
+\includepdf{declaracao.pdf}
 
 \end{document}
